@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+.tarjetas-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.tarjeta {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    width: 300px; /* Ancho fijo para las tarjetas */
+    margin-bottom: 20px;
+}
+
+.tarjeta .card-header {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px 8px 0 0;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.tarjeta .card-header span {
+    margin-left: 10px;
+    white-space: nowrap; /* Evitar que el texto se rompa en varias líneas */
+    overflow: hidden; /* Ocultar el contenido que se desborda */
+    text-overflow: ellipsis; /* Mostrar puntos suspensivos (...) cuando el texto se desborda */
+}
+
+.tarjeta .card-body {
+    padding: 20px;
+    overflow: hidden; /* Ocultar el contenido que se desborda */
+    max-height: 100px; /* Altura máxima para la sección de tareas */
+}
+
+.tarjeta .card-text {
+    font-size: 16px;
+    line-height: 1.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 5; /* Número máximo de líneas a mostrar */
+    -webkit-box-orient: vertical;
+    white-space: nowrap; /* Evitar que el texto se rompa en varias líneas */
+    overflow: hidden; /* Ocultar el contenido que se desborda */
+    text-overflow: ellipsis; /* Mostrar puntos suspensivos (...) cuando el texto se desborda */
+
+}
+
+.tarjeta .card-footer {
+    background-color: #f5f5f5;
+    padding: 10px 20px;
+    border-top: 1px solid #e0e0e0;
+    text-align: right;
+}
+
+.tarjeta .card-footer button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.tarjeta .card-footer button:hover {
+    background-color: #45a049;
+}
+
+.tarjeta span {
+    margin-left: -20px;
+}
+.image-class{
+    width: 300px;
+    justify-content:center;
+}
+.contenedor-imagen-clase{
+    display: flex;
+    justify-content: center;
+}

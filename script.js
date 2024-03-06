@@ -1,15 +1,21 @@
 var ventana = 1;
-/*
- * Funcion que se usa para cambiar la ventana actual
- * @param {*} index 
- */
+var ruta = "/view/";
+var ventanaSrc = "Materias/materiasView.html";
+cambiarVentana(1);
+
+function cargarVentana() {
+  var documento = document.getElementById("main-screen");
+  documento.setAttribute("src", ruta + ventanaSrc);
+  console.log(ruta);
+}
 function cambiarVentana(index) {
-    limpiarOpciones();
+  limpiarOpciones();
   ventana = index;
   switch (ventana) {
     case 1:
       var elemento = document.getElementById("inicio-item");
       elemento.classList.add("active");
+      ventanaSrc = "Materias/materiasView.html";
       break;
     case 2:
       var elemento = document.getElementById("tareas-item");
@@ -24,6 +30,7 @@ function cambiarVentana(index) {
       elemento.classList.add("active");
       break;
   }
+  cargarVentana();
 }
 /**
  * Marca a todas las ventada
@@ -37,4 +44,14 @@ function limpiarOpciones() {
   elemento.classList.remove("active");
   elemento = document.getElementById("acerca-item");
   elemento.classList.remove("active");
+}
+window.onmessage = function (e) {
+ if(e.data.key=="materia"){
+  ventanaSrc=e.data.data;
+ }
+ if(e.data.key=="tema"){
+  ventanaSrc=e.data.data;
+ }
+ cargarVentana();
+  console.log()
 }

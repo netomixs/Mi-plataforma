@@ -1,7 +1,13 @@
 /*
  * Sidebar
  */
-
+ .iframe {
+  width: 92vw;
+  height: 89vh;
+}
+.nav-btn {
+  visibility: visible;
+}
 @media (min-width: 768px) {
   .sidebar .offcanvas-lg {
     position: -webkit-sticky;
@@ -10,6 +16,17 @@
   }
   .nav-btn {
     visibility: hidden;
+  }
+  .barra-nav {
+    height: 85vh;
+    margin-left: 10px;
+  }
+  .iframe {
+    width: 80vw;
+    height: 85vh;
+  }
+  .menu-container {
+    margin-top: 40px;
   }
 }
 
@@ -100,6 +117,7 @@
   text-align: center;
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
+  margin-left: 100px;
 }
 
 .btn-bd-primary {
@@ -129,7 +147,7 @@
 .nav-item {
   font-size: 18px;
   margin-bottom: 20px;
-  width: 200px;
+  width: 150px;
   border-radius: 15px;
 }
 .nav-item.active {
@@ -152,3 +170,5 @@
   font-size: 18px;
   color: black;
 }
+
+ 
