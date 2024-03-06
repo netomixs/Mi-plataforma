@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MiProyecto</title>
+
+    <!--La cosa del Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!--Encabezado-->
+    <header class="navbar sticky-top  flex-md-nowrap p-0 shadow" data-bs-theme="dark">
+        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6  " href="#">
+            <span class="title-app "> <span>Mi</span> Plataforma</span></a>
+        <button class="nav-link px-3  nav-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu"
+            aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-list"></i>
+        </button>
+
+    </header>
+    <!--Barra de navegacion-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="sidebar border border-right col-md-3 col-lg-2 p-0 bg-body-tertiary">
+                <div class="offcanvas-md offcanvas-end bg-body-tertiary" tabindex="-1" id="sidebarMenu"
+                    aria-labelledby="sidebarMenuLabel">
+                    <div class="offcanvas-header">
+                        <span class="title-app "> <span>Mi</span> Plataforma</span>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                            data-bs-target="#sidebarMenu" aria-label="Close"></button>
+                    </div>
+                    <ul class="nav nav-pills flex-column mb-auto">
+                        <li class="nav-item active" id="inicio-item" onclick="cambiarVentana(1)"
+                            data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu">
+                            <a href="#" class="nav-link   " aria-current="page">
+                                <i class="bi bi-house icon-menu"></i>
+                                <span class="nav-text">Inicio</span>
+                            </a>
+                        </li>
+                        <li class="nav-item" id="tareas-item" onclick="cambiarVentana(2)" data-bs-dismiss="offcanvas"
+                            data-bs-target="#sidebarMenu">
+                            <a href="#" class="nav-link">
+                                <i class="bi bi-check2-circle  icon-menu"></i>
+                                <span class="nav-text">Tareas</span>
+                            </a>
+                        </li>
+                        <li class="nav-item" id="contacto-item" onclick="cambiarVentana(3)" data-bs-dismiss="offcanvas"
+                            data-bs-target="#sidebarMenu">
+                            <a href="#" class="nav-link">
+                                <i class="bi bi-person-video2 icon-menu"></i>
+                                <span class="nav-text">Contacto</span>
+                            </a>
+                        </li>
+                        <li class="nav-item" id="acerca-item" onclick="cambiarVentana(4)" data-bs-dismiss="offcanvas"
+                            data-bs-target="#sidebarMenu">
+                            <a href="#" class="nav-link">
+                                <i class="bi bi-info-circle icon-menu"></i>
+                                <span class="nav-text">Acerca de</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!--Tarjetas-->
+    
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
