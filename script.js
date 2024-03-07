@@ -47,13 +47,6 @@ function limpiarOpciones() {
   elemento = document.getElementById("acerca-item");
   elemento.classList.remove("active");
 }
-window.onmessage = function (e) {
- if(e.data.key=="materia"){
-  ventanaSrc=e.data.data;
- }
- if(e.data.key=="tema"){
-  ventanaSrc=e.data.data;
- }
- cargarVentana();
-  console.log()
+function cargarPagina(pagina) {
+  document.getElementById('iframeContenedor').src = pagina;
 }

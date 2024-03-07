@@ -41,50 +41,44 @@
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
                             data-bs-target="#sidebarMenu" aria-label="Close"></button>
                     </div>
-                    <div class="container-fluid menu-container">
-                        <ul class="nav nav-pills flex-column mb-auto">
-                            <li class="nav-item active" id="inicio-item" onclick="cambiarVentana(1)"
-                                data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu">
-                                <a href="#" class="nav-link   " aria-current="page">
-                                    <i class="bi bi-house icon-menu"></i>
-                                    <span class="nav-text">Inicio</span>
-                                </a>
-                            </li>
-                            <li class="nav-item" id="tareas-item" onclick="cambiarVentana(2)"
-                                data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu">
-                                <a href="#" class="nav-link">
-                                    <i class="bi bi-check2-circle  icon-menu"></i>
-                                    <span class="nav-text">Tareas</span>
-                                </a>
-                            </li>
-                            <li class="nav-item" id="contacto-item" onclick="cambiarVentana(3)"
-                                data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu">
-                                <a href="#" class="nav-link">
-                                    <i class="bi bi-person-video2 icon-menu"></i>
-                                    <span class="nav-text">Equipo</span>
-                                </a>
-                            </li>
-                            <li class="nav-item" id="acerca-item" onclick="cambiarVentana(4)"
-                                data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu">
-                                <a href="#" class="nav-link">
-                                    <i class="bi bi-info-circle icon-menu"></i>
-                                    <span class="nav-text">Acerca de</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                    <ul class="nav nav-pills flex-column mb-auto">
+                        <li class="nav-item active" id="inicio-item" onclick="cambiarVentana(1)"
+                            data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu">
+                            <a href="#" class="nav-link   " aria-current="page">
+                                <i class="bi bi-house icon-menu"></i>
+                                <span class="nav-text">Inicio</span>
+                            </a>
+                        </li>
+                        <li class="nav-item" id="tareas-item" onclick="cambiarVentana(2)" data-bs-dismiss="offcanvas"
+                            data-bs-target="#sidebarMenu">
+                            <a href="#" class="nav-link" onclick="cargarPagina('tareas.html')">
+                                <i class="bi bi-check2-circle  icon-menu"></i>
+                                <span class="nav-text">Tareas</span>
+                            </a>
+                        </li>
+                        <li class="nav-item" id="contacto-item" onclick="cambiarVentana(3)" data-bs-dismiss="offcanvas"
+                            data-bs-target="#sidebarMenu">
+                            <a href="#" class="nav-link">
+                                <i class="bi bi-person-video2 icon-menu"></i>
+                                <span class="nav-text">Contacto</span>
+                            </a>
+                        </li>
+                        <li class="nav-item" id="acerca-item" onclick="cambiarVentana(4)" data-bs-dismiss="offcanvas"
+                            data-bs-target="#sidebarMenu">
+                            <a href="#" class="nav-link">
+                                <i class="bi bi-info-circle icon-menu"></i>
+                                <span class="nav-text">Acerca de</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-                <iframe class="iframe" src="" id="main-screen">
-
-                    Tu navegador no soporta iframes.
-                </iframe>
-            </main>
+            <div class="col-md-9 col-lg-10 d-flex">
+                <iframe id="iframeContenedor" width="2500" height="600" frameborder="0"
+                    style="border:0; margin-top: 30px;"></iframe>
+            </div>
         </div>
     </div>
-
-    <!--Tarjetas-->
 
 
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
