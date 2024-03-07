@@ -1,0 +1,104 @@
+:root {
+    --tema-1: #6d96e5;
+    --tema-2: #76bca7;
+    --tema-3: #a48ed4;
+}
+
+@font-face {
+    font-family: 'Segoe UI';
+    src: url('SegoeUI-Regular.woff2') format('woff2'),
+        url('SegoeUI-Regular.woff') format('woff');
+}
+
+* {
+    font-family: 'Segoe UI';
+}
+
+.card-container .content{
+    margin: 0px 20px;
+}
+.card-container a{
+}
+
+.tema1,
+.tema1.linea {
+    color: var(--tema-1);
+}
+
+.tema2,
+.tema2 .linea {
+    color: var(--tema-2);
+}
+
+.tema3 {
+    color: var(--tema-3);
+}
+
+
+.linea {
+    display: inline-block;
+    width: 80%;
+    height: 2px;
+    margin-right: 10px;
+}
+
+.tema1 span {
+    background-color: var(--tema-1);
+}
+
+.tema2 span {
+    background-color: var(--tema-2);
+}
+
+.tema3 span {
+    background-color: var(--tema-3);
+}
+
+.card-container {
+    margin: 20px;
+    color: black;
+    box-shadow: 0px 5px 15px rgba(54, 53, 53, 0.4);
+    border-radius: 5px;
+}
+
+.card-header {
+    margin: 20px;
+}
+
+
+.card-expand {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.expandir {
+    border: none;
+    background-color: white;
+    transition: border 3.3s ease-in-out;
+}
+
+.expandir:hover {
+    border: solid 1px black;
+    border-radius: 10%;
+}
+
+@media (max-width: 558px) {
+    .linea {
+        width: 70%;
+    }
+}
+
+@media (max-width: 336px) {
+    .linea {
+        width: 60%;
+    }
+}
+
+@media (max-width: 238px) {
+    .linea {
+        width: 40%;
+    }
+}

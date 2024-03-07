@@ -47,7 +47,7 @@
                         </li>
                         <li class="nav-item" id="tareas-item" onclick="cambiarVentana(2)" data-bs-dismiss="offcanvas"
                             data-bs-target="#sidebarMenu">
-                            <a href="#" class="nav-link">
+                            <a href="#" class="nav-link" onclick="cargarPagina('tareas.html')">
                                 <i class="bi bi-check2-circle  icon-menu"></i>
                                 <span class="nav-text">Tareas</span>
                             </a>
@@ -71,10 +71,13 @@
 
 
             </div>
+            <div class="col-md-9 col-lg-10 d-flex">
+                <iframe id="iframeContenedor" width="2500" height="600" frameborder="0"
+                    style="border:0; margin-top: 30px;"></iframe>
+            </div>
         </div>
     </div>
-    <!--Tarjetas-->
-    
+
 
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>

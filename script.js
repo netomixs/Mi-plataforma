@@ -4,7 +4,7 @@ var ventana = 1;
  * @param {*} index 
  */
 function cambiarVentana(index) {
-    limpiarOpciones();
+  limpiarOpciones();
   ventana = index;
   switch (ventana) {
     case 1:
@@ -37,4 +37,7 @@ function limpiarOpciones() {
   elemento.classList.remove("active");
   elemento = document.getElementById("acerca-item");
   elemento.classList.remove("active");
+}
+function cargarPagina(pagina) {
+  document.getElementById('iframeContenedor').src = pagina;
 }
