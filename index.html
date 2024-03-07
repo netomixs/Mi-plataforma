@@ -18,12 +18,13 @@
 <body>
     <!--Encabezado-->
     <header class="navbar sticky-top  flex-md-nowrap p-0 shadow" data-bs-theme="dark">
-        <div>      <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6  " href="#">
-            <span class="title-app "> <span>Mi</span> Plataforma </span></a>
-            <button  onclick="history.back()"type="button" class="btn btn-light"><i class="bi bi-arrow-left"></i></button>
+        <div> <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6  " href="#">
+                <span class="title-app "> <span>Mi</span> Plataforma </span></a>
+            <button onclick="history.back()" type="button" class="btn btn-light"><i
+                    class="bi bi-arrow-left"></i></button>
         </div>
-  
-           
+
+
         <button class="nav-link px-3  nav-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu"
             aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
             <i class="bi bi-list"></i>
@@ -60,11 +61,18 @@
                             <li class="nav-item" id="contacto-item" onclick="cambiarVentana(3)"
                                 data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu">
                                 <a href="#" class="nav-link">
-                                    <i class="bi bi-person-video2 icon-menu"></i>
+                                    <i class="bi  bi-people icon-menu"></i>
                                     <span class="nav-text">Equipo</span>
-                                </a>
+                                </a> 
                             </li>
-                            <li class="nav-item" id="acerca-item" onclick="cambiarVentana(4)"
+                            <li class="nav-item" id="bibliografia-item" onclick="cambiarVentana(4)"
+                            data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu">
+                            <a href="#" class="nav-link">
+                                <i class="bi bi-book icon-menu"></i>
+                                <span class="nav-text">Bibliografía</span>
+                            </a>
+                        </li>
+                            <li class="nav-item" id="acerca-item" onclick="cambiarVentana(5)"
                                 data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu">
                                 <a href="#" class="nav-link">
                                     <i class="bi bi-info-circle icon-menu"></i>

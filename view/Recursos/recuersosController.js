@@ -2,6 +2,10 @@ function load(key) {
   var stringObjeto = JSON.parse(localStorage.getItem(key));
   return stringObjeto;
 }
+function save(key, objeto) {
+  var miObjetoComoJSON = JSON.stringify(objeto);
+  localStorage.setItem(key, miObjetoComoJSON);
+}
 var idTema = localStorage.getItem("temaActual");
 var idMateria = localStorage.getItem("materiaActual");
 var materias = load("materias");
@@ -10,20 +14,20 @@ var materia = materias.find(function (objeto) {
   return objeto.Id == idMateria;
 });
 
-var tema = materia.Temas.find(function (objeto) {
+var Categoria = materia.Temas.find(function (objeto) {
   return objeto.Id == idTema;
 });
 var titulo_Doc = document.getElementById("texto-titulo");
-titulo_Doc.textContent = "Tema " + tema.Id;
-titulo_Doc.style.color = tema.Color;
-var linea=document.getElementById("linea-titulo")
-linea.style.color= tema.Color;
-linea.style.backgroundColor= tema.Color;
-var recueros = tema.Recursos;
+titulo_Doc.textContent = "Tema " + Categoria.Id;
+titulo_Doc.style.color = Categoria.Color;
+var linea = document.getElementById("linea-titulo");
+linea.style.color = Categoria.Color;
+linea.style.backgroundColor = Categoria.Color;
+var recueros = Categoria.Recursos;
 function cargarRecurso(id) {
   var documento = document.getElementById("frame");
-  documento.setAttribute("src", tema.Recursos[id - 1].Enlace);
-  if (tema.Recursos[id - 1].Tipo == "pdf") {
+  documento.setAttribute("src", Categoria.Recursos[id - 1].Enlace);
+  if (Categoria.Recursos[id - 1].Tipo == "pdf") {
     documento.classList.remove("frame");
     documento.classList.add("pdf");
   } else {
@@ -44,9 +48,16 @@ function createCard(recurso) {
     // card.className="card seleccion"
     cardBody.classList.add("seleccion");
     cargarRecurso(recurso.Id);
+    recurso.Completado = true;
+    if (recurso.Completado) {
+      var palomita = document.getElementById("palomita-" + recurso.Id);
+      save("materias", materias);
+      palomita.style.display = "block";
+    }
   });
   if (recurso.Id == 1) {
     cardBody.classList.add("seleccion");
+    recurso.Completado = true;
     cargarRecurso(recurso.Id);
   }
   var row = document.createElement("div");
@@ -60,22 +71,32 @@ function createCard(recurso) {
   var img = document.createElement("img");
   img.className = "imagen-minuatua";
   if (recurso.Tipo == "pdf") {
-    img.src = "/img/pdf.jpg";
+    img.src = "/img/pdf.png";
   }
   if (recurso.Tipo == "video") {
-    img.src = "/img/youtube.jpg";
+    img.src = "/img/youtube.png";
   }
   if (recurso.Tipo == "presentacion") {
     img.src = "/img/power_Point.png";
   }
   if (recurso.Tipo == "genial") {
-    img.src = "/img/genail.jpg";
+    img.src = "/img/genail.png";
   }
 
   col4.appendChild(img);
 
   var col8 = document.createElement("div");
-  col8.className = "col-7";
+  col8.className = "col-6";
+  var col1 = document.createElement("div");
+  col1.className = "col-1 container-palomina";
+  var iC = document.createElement("i");
+  iC.id = "palomita-" + recurso.Id;
+  iC.className = "bi bi-check";
+
+  if (recurso.Completado == false) {
+    iC.style.display = "none";
+  }
+  col1.appendChild(iC);
 
   var h5 = document.createElement("h5");
   h5.className = "card-title";
@@ -86,11 +107,11 @@ function createCard(recurso) {
   col8.appendChild(p);
 
   row.appendChild(col8);
-
+  row.appendChild(col1);
   return card;
 }
 var listaElement = document.getElementById("lista");
-tema.Recursos.forEach((recurso) => {
+Categoria.Recursos.forEach((recurso) => {
   listaElement.appendChild(createCard(recurso));
 });
 function limpiar() {
@@ -100,4 +121,4 @@ function limpiar() {
   });
 }
 
-cargarRecurso(tema.Recursos[0].Id);
+cargarRecurso(Categoria.Recursos[0].Id);

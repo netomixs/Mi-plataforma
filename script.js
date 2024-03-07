@@ -21,6 +21,7 @@ function cambiarVentana(index) {
     case 2:
       var elemento = document.getElementById("tareas-item");
       elemento.classList.add("active");
+      ventanaSrc = "Tareas/tareasView.html";
       break;
     case 3:
       var elemento = document.getElementById("contacto-item");
@@ -28,24 +29,28 @@ function cambiarVentana(index) {
       ventanaSrc = "Integrantes/index.html";
       break;
     case 4:
-      var elemento = document.getElementById("acerca-item");
+      var elemento = document.getElementById("bibliografia-item");
       elemento.classList.add("active");
+      ventanaSrc = "Bibliografia/bibliografiaView.html";
       break;
+      case 5:
+        var elemento = document.getElementById("acerca-item");
+        elemento.classList.add("active");
+        ventanaSrc = "Acerca/acercaStyleView.html";
+        break;
   }
   cargarVentana();
 }
 /**
  * Marca a todas las ventada
- */
+ */function limpiar() {
+  const elementos = document.querySelectorAll(".active");
+  elementos.forEach((elemento) => {
+    elemento.classList.remove("active");
+  });
+}
 function limpiarOpciones() {
-  var elemento = document.getElementById("inicio-item");
-  elemento.classList.remove("active");
-  elemento = document.getElementById("tareas-item");
-  elemento.classList.remove("active");
-  elemento = document.getElementById("contacto-item");
-  elemento.classList.remove("active");
-  elemento = document.getElementById("acerca-item");
-  elemento.classList.remove("active");
+  limpiar() 
 }
 window.onmessage = function (e) {
  if(e.data.key=="materia"){

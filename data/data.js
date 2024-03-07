@@ -13,6 +13,7 @@ function Recurso(id, titulo, descripcion, tipo, enlace) {
   this.Descripcion = descripcion;
   this.Tipo = tipo;
   this.Enlace = enlace;
+  this.Completado=false;
 }
 function Tema(id, nombre, descripcion,color) {
   this.Id = id;
@@ -39,7 +40,7 @@ materia.Descripcion =
 materia.Image =
   "https://www.aauniv.com/s/blog/wp-content/uploads/2022/03/lenguajes-de-programacion.jpeg";
 /**Tema 1 */
-var tema = new Tema(
+var Categoria = new Tema(
   1,
   "Diseño Algorítmico",
   "1.1 Conceptos básicos." +
@@ -55,7 +56,7 @@ var recurso = new Recurso(
   "video",
   "https://www.youtube.com/embed/a-0VLxbo1hM?si=QIhoPt4tRE8sjbfY"
 );
-tema.Recursos.push(recurso);
+Categoria.Recursos.push(recurso);
 var recurso = new Recurso(
   2,
   "Infografia del tema 1",
@@ -63,7 +64,7 @@ var recurso = new Recurso(
   "pdf",
   "/assets/docs/infografia_tema_1.pdf"
 );
-tema.Recursos.push(recurso);
+Categoria.Recursos.push(recurso);
 var recurso = new Recurso(
   3,
   "Presentacion del tema 1",
@@ -71,7 +72,7 @@ var recurso = new Recurso(
   "presentacion",
   "/assets/docs/Tema1.pdf"
 );
-tema.Recursos.push(recurso);
+Categoria.Recursos.push(recurso);
 var recurso = new Recurso(
   4,
   "Mapa mental del tema 1",
@@ -79,10 +80,10 @@ var recurso = new Recurso(
   "genial",
   "https://view.genial.ly/65e877f43c8de40014099e09/interactive-content-mapa-mental-semicircular "
 );
-tema.Recursos.push(recurso);
-materia.Temas.push(tema);
+Categoria.Recursos.push(recurso);
+materia.Temas.push(Categoria);
 /**Tema 2 */
-var tema = new Tema(
+var Categoria = new Tema(
   2,
   "Introducción a la Programación",
   "2.1 Conceptos básicos. " +
@@ -99,7 +100,7 @@ var recurso = new Recurso(
   "video",
   "https://www.youtube.com/embed/p9XoWLx70Zc?si=wwS7n3sG-AI7cb-8"
 );
-tema.Recursos.push(recurso);
+Categoria.Recursos.push(recurso);
 var recurso = new Recurso(
   2,
   "Mapa metal del tema 2",
@@ -107,7 +108,7 @@ var recurso = new Recurso(
   "pdf",
   "/assets/docs/Mapa_Tema_2.pdf"
 );
-tema.Recursos.push(recurso);
+Categoria.Recursos.push(recurso);
 var recurso = new Recurso(
   3,
   "Presentación del tema 2",
@@ -115,7 +116,7 @@ var recurso = new Recurso(
   "presentacion",
   "/assets/docs/Tema_2.pdf"
 );
-tema.Recursos.push(recurso);
+Categoria.Recursos.push(recurso);
 var recurso = new Recurso(
   4,
   "Infografía del tema 2",
@@ -123,10 +124,10 @@ var recurso = new Recurso(
   "genial",
   "https://view.genial.ly/65e877f43c8de40014099e09/interactive-content-mapa-mental-semicircular"
 );
-tema.Recursos.push(recurso);
-materia.Temas.push(tema);
+Categoria.Recursos.push(recurso);
+materia.Temas.push(Categoria);
 /**Tema 3 */
-var tema = new Tema(
+var Categoria = new Tema(
   3,
   "Control de Flujo",
   "3.1 Estructuras secuenciales.\n " +
@@ -141,7 +142,7 @@ var recurso = new Recurso(
   "video",
   "https://www.youtube.com/embed/YReFQ-M0ZXg?si=yxwEpPMT99M7eo9z"
 );
-tema.Recursos.push(recurso);
+Categoria.Recursos.push(recurso);
 
 var recurso = new Recurso(
   2,
@@ -150,7 +151,7 @@ var recurso = new Recurso(
   "presentacion",
   "/assets/docs/Tema_3_Estructura_Secuencial.pdf"
 );
-tema.Recursos.push(recurso);
+Categoria.Recursos.push(recurso);
 var recurso = new Recurso(
   3,
   "Estructuras selectivas",
@@ -158,7 +159,7 @@ var recurso = new Recurso(
   "presentacion",
   "/assets/docs/Tema_3_Estructuras_Selectivas.pdf"
 );
-tema.Recursos.push(recurso);
+Categoria.Recursos.push(recurso);
 
 var recurso = new Recurso(
   4,
@@ -167,9 +168,9 @@ var recurso = new Recurso(
   "presentacion",
   "/assets/docs/Tema_3_Estructura_Iteratura.pdf"
 );
-tema.Recursos.push(recurso);
-materia.Temas.push(tema);
-var tema = new Tema(
+Categoria.Recursos.push(recurso);
+materia.Temas.push(Categoria);
+var Categoria = new Tema(
   4,
   "Organización de datos",
   "4.1 Arreglos" +
@@ -185,7 +186,7 @@ var recurso = new Recurso(
   "video",
   "https://www.youtube.com/embed/jx3i7vMajdw?si=O6hwCWcF1mYfTrgu"
 );
-tema.Recursos.push(recurso);
+Categoria.Recursos.push(recurso);
 var recurso = new Recurso(
   2,
   "Arreglos",
@@ -193,7 +194,7 @@ var recurso = new Recurso(
   "presentacion",
   "/assets/docs/Tema_4_Arreglos"
 );
-tema.Recursos.push(recurso);
+Categoria.Recursos.push(recurso);
 var recurso = new Recurso(
   3,
   "Arreglos multidimencionales",
@@ -201,7 +202,7 @@ var recurso = new Recurso(
   "presentacion",
   "/assets/docs/Tema_4_Multidimensionales.pdf"
 );
-tema.Recursos.push(recurso);
+Categoria.Recursos.push(recurso);
 var recurso = new Recurso(
   4,
   "Estructuras o registros",
@@ -209,10 +210,10 @@ var recurso = new Recurso(
   "pdf",
   "/assets/docs/Tema_4_Infografía.pdf"
 );
-tema.Recursos.push(recurso);
+Categoria.Recursos.push(recurso);
  
-materia.Temas.push(tema);
-var tema = new Tema(
+materia.Temas.push(Categoria);
+var Categoria = new Tema(
   5,
   "Modularidad",
   "5.1 Declaración y uso de módulos. " +
@@ -227,7 +228,7 @@ var recurso = new Recurso(
   "video",
   "https://www.youtube.com/embed/RqkmtLkdFbo?si=PKZg8t2IoiWA2E2l"
 );
-tema.Recursos.push(recurso);
+Categoria.Recursos.push(recurso);
 var recurso = new Recurso(
   2,
   "Modularidad presentacion",
@@ -235,8 +236,12 @@ var recurso = new Recurso(
   "genial",
   "https://view.genial.ly/65e889f0a586e50014112a9d/presentation-tema-5"
 );
-tema.Recursos.push(recurso);
-materia.Temas.push(tema);
+Categoria.Recursos.push(recurso);
+materia.Temas.push(Categoria);
 materias.push(materia);
 console.log(materias);
-save("materias", materias);
+ 
+if(load(materias)==null){
+  save("materias", materias);
+
+}

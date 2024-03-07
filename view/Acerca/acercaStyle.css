@@ -1,0 +1,59 @@
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0%;
+    padding: 0%;
+}
+
+/* Inclusión de la fuente Segoe UI */
+@font-face {
+    font-family: 'Segoe UI';
+    src: url('SegoeUI-Regular.woff2') format('woff2'),
+         url('SegoeUI-Regular.woff') format('woff');
+  }
+
+h1 {
+    text-align: left;
+    display: inline-block;
+    font-family: 'Segoe UI', sans-serif;
+    color: #FF366D;
+}
+
+.contenedor {
+    width: 80%;
+    margin: 0 auto;
+}
+
+hr {
+    margin-top: 0;
+    margin-bottom: 10px;
+    border: 2px solid #FF366D;
+    border-radius: 5%;
+    width: 80%;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.titulo-bibliografia {
+    margin-bottom: 20px;
+}
+
+.lista-bibliografia {
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.lista-bibliografia li {
+    padding: 10px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.lista-bibliografia li a {
+    text-decoration: none;
+    color: black;
+}
+
+.lista-bibliografia li a:hover {
+    color: blue;
+}
