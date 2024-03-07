@@ -240,8 +240,5 @@ Categoria.Recursos.push(recurso);
 materia.Temas.push(Categoria);
 materias.push(materia);
 console.log(materias);
+save("materias", materias);
  
-if(load(materias)==null){
-  save("materias", materias);
-
-}

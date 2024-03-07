@@ -42,6 +42,7 @@ hr {
     padding: 0;
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
+    text-align: justify;
 }
 
 .lista-bibliografia li {

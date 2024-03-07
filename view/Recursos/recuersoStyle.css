@@ -26,6 +26,7 @@ color: green;
   width: 95vw;
   height: 10px;
   margin: 0;
+  border: 2px solid #FF366D;
   background-color: aqua;
   border-style: solid;
 }
@@ -52,12 +53,12 @@ color: green;
 }
 .columna-1 {
   height: 44vh;
-  width: 90vw;
+  width: 100vw;
   overflow: hidden;
   overflow-y: scroll;
 }
 .frame {
-  width: 90vw;
+  width: 100vw;
   height: 40vh;
 }
 .pdf {
