@@ -1,6 +1,7 @@
 var ventana = 1;
 var ruta = "/view/";
 var ventanaSrc = "Materias/materiasView.html";
+var isReturn
 cambiarVentana(1);
 
 function cargarVentana() {
@@ -24,6 +25,7 @@ function cambiarVentana(index) {
     case 3:
       var elemento = document.getElementById("contacto-item");
       elemento.classList.add("active");
+      ventanaSrc = "Integrantes/index.html";
       break;
     case 4:
       var elemento = document.getElementById("acerca-item");

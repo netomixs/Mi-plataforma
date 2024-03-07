@@ -1,6 +1,9 @@
 /*
  * Sidebar
  */
+ .body{
+  font-family: 'Segoe UI', sans-serif;
+ }
  .iframe {
   width: 92vw;
   height: 89vh;

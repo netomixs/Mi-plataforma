@@ -18,22 +18,23 @@ function load(key) {
 //Carga el id de la materia seleccionada
 var Idmateria = load("materiaActual");
 var materias = [];
-materias=load("materias");
-console.log(materias) 
+materias = load("materias");
 var materia = materias.find(function (objeto) {
   return objeto.Id == Idmateria;
 });
-console.log(materia);
 function cargarRecursos(id) {
   localStorage.setItem("temaActual", id);
-  console.log(id);
-  window.parent.postMessage({ key: 'tema', data: 'Recursos/RecursosView.Html' }, '*');
-
+  1;
+  window.parent.postMessage(
+    { key: "tema", data: "Recursos/RecursosView.Html" },
+    "*"
+  );
 }
 function agregarTarjetasIniciales() {
   var tarjetasContainer = document.getElementById("tarjetasContainer");
   materia.Temas.forEach((item, index) => {
-    const colorFondoCabecera = coloresFondo[index % coloresFondo.length];
+    const colorFondoCabecera = item.Color;
+    console.log(colorFondoCabecera);
     const temaTruncado = item.Nombre;
     const tareaTruncada = item.Descripcion;
     const nuevaTarjeta = document.createElement("div");
@@ -41,7 +42,7 @@ function agregarTarjetasIniciales() {
     nuevaTarjeta.innerHTML = `
         <div class="card tarjeta" >
             <div class="card-header" style="background-color: ${colorFondoCabecera}">
-                <p>${temaTruncado}</p>
+                <div >${temaTruncado}</div>
                 <br>
             </div>
             <div class="contenedor-imagen-clase">
@@ -53,11 +54,11 @@ function agregarTarjetasIniciales() {
         </div>
     `;
     nuevaTarjeta.addEventListener("click", function () {
-      cargarRecursos(item.Id) 
+      cargarRecursos(item.Id);
       console.log("Tarjeta clickeada");
     });
     tarjetasContainer.appendChild(nuevaTarjeta);
   });
 }
- 
+
 agregarTarjetasIniciales();

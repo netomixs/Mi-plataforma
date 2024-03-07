@@ -1,0 +1,85 @@
+.body {
+  font-family: "Segoe UI", sans-serif;
+}
+.titulo-seccion {
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  margin-bottom: 10px;
+}
+.seleccion {
+  background-color: rgb(196, 196, 196);
+}
+.linea {
+  width: 95vw;
+  height: 10px;
+  margin: 0;
+  background-color: aqua;
+  border-style: solid;
+}
+.titulo-texto {
+  font-size: 32px;
+  margin: 0px;
+  width: 120px;
+  color: aqua;
+  font-weight: bolder;
+}
+.imagen-minuatua {
+  width: 110px;
+  margin-right: 50px;
+}
+.card {
+  margin-top: 20px;
+}
+.columna-2 {
+  order: -1;
+}
+.celda {
+  display: flex;
+  flex-wrap: wrap;
+}
+.columna-1 {
+  height: 44vh;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.frame {
+  width: 100vw;
+  height: 40vh;
+}
+.pdf {
+  width: 100vw;
+  height: 40vh;
+}
+
+@media (min-width: 768px) {
+  .pdf {
+    width: 100vw;
+    height: 90vh;
+  }
+  .imagen-minuatua {
+    width: 100%;
+  }
+  .frame {
+    width: 100vw;
+    height: 80vh;
+  }
+  .celda {
+    display: flex;
+  }
+  .columna {
+    flex: 1;
+    width: 30%;
+  }
+  .columna-1 {
+    height: 90vh;
+    overflow: hidden;
+    overflow-y: scroll;
+  }
+  .columna-2 {
+    width: 70vw;
+    display: flex;
+    justify-content: center;
+    order: 1;
+  }
+}
