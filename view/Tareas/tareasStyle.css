@@ -6,8 +6,7 @@
 
 @font-face {
     font-family: 'Segoe UI';
-    src: url('SegoeUI-Regular.woff2') format('woff2'),
-        url('SegoeUI-Regular.woff') format('woff');
+ 
 }
 
 * {
@@ -101,4 +100,27 @@
     .linea {
         width: 40%;
     }
+}
+@media (min-width: 768px) {
+
+
+}
+.frame{
+ width: 90vw;
+ height: 120vh;   
+}
+.accordion{
+    margin-top: 10px;
+}
+hr {
+    margin-top: 0;
+    margin-bottom: 10px;
+    border: 10px solid #FF366D;
+    border-radius: 5%;
+    width: 80%;
+    display: inline-block;
+    vertical-align: bottom;
+}
+.contenedor-tema{
+    margin-top: 20px;
 }

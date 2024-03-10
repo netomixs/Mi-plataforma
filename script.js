@@ -1,7 +1,7 @@
 var ventana = 1;
 var ruta = "/view/";
 var ventanaSrc = "Materias/materiasView.html";
-var isReturn
+var isReturn;
 cambiarVentana(1);
 
 function cargarVentana() {
@@ -24,7 +24,7 @@ function cambiarVentana(index) {
       ventanaSrc = "Tareas/tareasView.html";
       break;
     case 3:
-      var elemento = document.getElementById("contacto-item");
+      var elemento = document.getElementById("integrantes-item");
       elemento.classList.add("active");
       ventanaSrc = "Integrantes/index.html";
       break;
@@ -33,32 +33,38 @@ function cambiarVentana(index) {
       elemento.classList.add("active");
       ventanaSrc = "Bibliografia/bibliografiaView.html";
       break;
-      case 5:
-        var elemento = document.getElementById("acerca-item");
-        elemento.classList.add("active");
-        ventanaSrc = "Acerca/acercaStyleView.html";
-        break;
+    case 5:
+      var elemento = document.getElementById("contacto-item");
+      elemento.classList.add("active");
+      ventanaSrc = "Contacto/contactoView.html";
+      break;
+    case 6:
+      var elemento = document.getElementById("acerca-item");
+      elemento.classList.add("active");
+      ventanaSrc = "Acerca/acercaStyleView.html";
+
+      break;
   }
   cargarVentana();
 }
 /**
  * Marca a todas las ventada
- */function limpiar() {
+ */ function limpiar() {
   const elementos = document.querySelectorAll(".active");
   elementos.forEach((elemento) => {
     elemento.classList.remove("active");
   });
 }
 function limpiarOpciones() {
-  limpiar() 
+  limpiar();
 }
 window.onmessage = function (e) {
- if(e.data.key=="materia"){
-  ventanaSrc=e.data.data;
- }
- if(e.data.key=="tema"){
-  ventanaSrc=e.data.data;
- }
- cargarVentana();
-  console.log()
-}
+  if (e.data.key == "materia") {
+    ventanaSrc = e.data.data;
+  }
+  if (e.data.key == "tema") {
+    ventanaSrc = e.data.data;
+  }
+  cargarVentana();
+  console.log();
+};

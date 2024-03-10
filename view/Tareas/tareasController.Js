@@ -1,23 +1,31 @@
-function crearElemento(tarea) {
-  var texto = ` <div class="accordion" id="accordionExample">
+function crearElemento(tarea,tema) {
+  var texto = ` <div class="accordion" id="accordion-${tarea.Id}-${tema}">
 <div class="accordion-item">
     <h2 class="accordion-header">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapse-${tarea.Id}-${tema}" aria-expanded="true" aria-controls="#collapse-${tarea.Id}-${tema}" >
             <h4>${tarea.Titulo}</h4>
         </button>
     </h2>
-    <div id="collapseOne" class="accordion-collapse collapse " data-bs-parent="#accordionExample">
+    <div id="collapse-${tarea.Id}-${tema}"  class="accordion-collapse collapse " data-bs-parent="accordion-${tarea.Id}-${tema}">
         <div class="accordion-body">
         <strong>${tarea.Subtitulo}</strong>
             <p>${tarea.Descripcion}</p>
-            <a type="button"href="${tarea.Enlace}" class="btn btn-link" id="link" target="_blank">
-                Comenzar
-            </a>
+     
+            <div class="  columna-2 columna" id="iframe-contenedor">
+            <iframe class="frame" src="${tarea.Enlace}" id="frame" ></iframe>
+       
+        </div>
+      
         </div>
     </div>
 </div>
 </div>`;
+/*
+       <a type="button"href="${tarea.Enlace}" class="btn btn-link" id="link" target="_blank">
+                Comenzar
+            </a>
+*/
   var element = document.createElement("div");
   element.innerHTML = texto;
   return element;
@@ -73,7 +81,7 @@ var tarea = new Tarea(
   "https://es.educaplay.com/recursos-educativos/18163205-programacion_2_1_2_5.html"
 );
 Categoria.Tareas.push(tarea);
-var tarea =new  Tarea(
+var tarea = new Tarea(
   2,
   "Crucigrama: Programación.",
   "Descripción de la actividad.",
@@ -99,7 +107,7 @@ var tarea = new Tarea(
   "https://es.educaplay.com/recursos-educativos/18163269-estructuras_selectivas.html"
 );
 Categoria.Tareas.push(tarea);
-var tarea =new Tarea(
+var tarea = new Tarea(
   2,
   "Sopa de letras: Estructuras Secuenciales.",
   "Descripción de la actividad.",
@@ -107,7 +115,7 @@ var tarea =new Tarea(
   "https://es.educaplay.com/recursos-educativos/18163356-estructuras_secuenciales.html"
 );
 Categoria.Tareas.push(tarea);
-var tarea =new Tarea(
+var tarea = new Tarea(
   3,
   "Crucigrama: Estructuras Iterativas",
   "Descripción de la actividad.",
@@ -121,19 +129,25 @@ crearTema(temas);
 function crearTema(temas) {
   temas.forEach((item, index) => {
     var contenedor = document.createElement("div");
-    contenedor.className = "container-fluid";
+    contenedor.className = "container-fluid contenedor-tema";
+    var tituloComtenedor = document.createElement("div");
+    tituloComtenedor.className = "titulo-bibliografia";
     var titulo = document.createElement("h1");
     titulo.style.color = item.Color;
-    var linea = document.createElement("span");
-    linea = className = "linea";
-   
-    titulo.appendChild(linea);
-    contenedor.appendChild(titulo);
-    temas.Tareas.forEach((tarea) => {
-      var element = crearElemento(tarea);
+    titulo.textContent = "Tema " + item.Id;
+    tituloComtenedor.appendChild(titulo);
+    var linea2 = document.createElement("hr");
+    tituloComtenedor. appendChild(linea2);
+    contenedor.appendChild(tituloComtenedor);
+
+    item.Tareas.forEach((tarea) => {
+      var element = crearElemento(tarea,item.Id);
+
       contenedor.appendChild(element);
+      console.log(contenedor);
     });
-    var cuerpo = document.getElementById("contenedorgrande");
+    var cuerpo = document.getElementById("contenedor-grande");
+    console.log(cuerpo);
     cuerpo.appendChild(contenedor);
   });
 }

@@ -11,7 +11,7 @@
   top: 0; /* Alineación arriba */
   right: 0; /* Alineación a la derecha */
   font-size: 24px; /* Tamaño del ícono */
-color: green;
+  color: green;
 }
 .titulo-seccion {
   display: flex;
@@ -24,11 +24,9 @@ color: green;
 }
 .linea {
   width: 95vw;
-  height: 10px;
   margin: 0;
-  border: 2px solid #FF366D;
-  background-color: aqua;
-  border-style: solid;
+ 
+ 
 }
 .titulo-texto {
   font-size: 32px;
@@ -83,17 +81,29 @@ color: green;
   }
   .columna {
     flex: 1;
-    width: 30%;
+    width: 50%;
   }
   .columna-1 {
     height: 90vh;
     overflow: hidden;
     overflow-y: scroll;
+    margin-right: 25px;
+    scrollbar-width: none;
   }
   .columna-2 {
-    width: 70vw;
+    width: 60vw;
     display: flex;
     justify-content: center;
     order: 1;
   }
+}
+.card-title {
+  font-size: 14px;
+  font-weight: bold;
+}
+.col-8 p {
+  font-size: 12px;
+}
+.card {
+  margin-bottom: 25px;
 }

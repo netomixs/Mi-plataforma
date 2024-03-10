@@ -22,7 +22,7 @@ titulo_Doc.textContent = "Tema " + Categoria.Id;
 titulo_Doc.style.color = Categoria.Color;
 var linea = document.getElementById("linea-titulo");
 linea.style.color = Categoria.Color;
-linea.style.backgroundColor = Categoria.Color;
+linea.style.border=` 5px solid ${Categoria.Color}`
 var recueros = Categoria.Recursos;
 function cargarRecurso(id) {
   var documento = document.getElementById("frame");
@@ -65,7 +65,7 @@ function createCard(recurso) {
   cardBody.appendChild(row);
 
   var col4 = document.createElement("div");
-  col4.className = "col-5  ";
+  col4.className = "col-3  ";
   row.appendChild(col4);
 
   var img = document.createElement("img");
@@ -86,7 +86,7 @@ function createCard(recurso) {
   col4.appendChild(img);
 
   var col8 = document.createElement("div");
-  col8.className = "col-6";
+  col8.className = "col-8";
   var col1 = document.createElement("div");
   col1.className = "col-1 container-palomina";
   var iC = document.createElement("i");
