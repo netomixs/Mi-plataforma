@@ -85,7 +85,7 @@ body {
     width: 450px;
     height: 200px;
     /*background: linear-gradient(to right, #10cf46, #d56814);*/
-    background-color: #5e2066;
+    background-color: #39AF8C;
     transform: rotate(-35deg);
     top: -90px;
     left: -115px;
@@ -99,7 +99,7 @@ body {
 
 .card .content h6 {
     font-size: 13px;
-    color: #5e2066;
+    color: #000000;
 }
 
 /*.card .content p {
@@ -136,4 +136,8 @@ body {
 
 .card .links a:nth-child(1):hover {
     color: blue;
+}
+
+#ernesto{
+    margin-bottom: 30px;
 }

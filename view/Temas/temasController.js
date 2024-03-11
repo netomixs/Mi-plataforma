@@ -49,7 +49,6 @@ function agregarTarjetasIniciales() {
            
             </div>
             <div class="card-body">
-                <p class="card-text">${tareaTruncada}</p>
             </div>
         </div>
     `;
